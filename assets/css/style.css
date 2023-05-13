@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+
+/* css variables */
+:root {
+  --background-clr: hsl(230, 100%, 87%);
+  --social-link-clr: hsl(0, 0%, 0%);
+  --social-link-hover-clr: hsl(0, 0%, 20%);
+
+  --fw-500: 500;
+  --fw-700: 700;
+  --ff-ubuntu: "Ubuntu", sans-serif;
+}
+
+/* reset */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+  height: 100%;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  font-size: 1rem;
+  font-family: var(--ff-ubuntu);
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* reusable classes */
+.text-center {
+  text-align: center;
+}
+
+/* header */
+.header {
+  background-color: var(--background-clr);
+  padding-block: 0.625rem;
+}
+
+.headline {
+  font-size: 1.875rem;
+  font-weight: var(--fw-500);
+}
+
+/* main */
+main {
+  padding-block: 1.5625rem;
+  padding-inline: 0.9375rem;
+}
+
+/* hero content */
+.hero-banner {
+  margin-block: 1.375rem;
+}
+
+.hero-banner img {
+  transition: 1s ease;
+  margin-inline: auto;
+}
+
+.hero-banner img:is(:hover, :focus-visible) {
+  border-radius: 50%;
+  transition: 1s ease;
+}
+
+.hero-title {
+  margin-block-end: 1.0625rem;
+}
+
+.hero-content-group {
+  width: min(55ch, 100% - 1rem);
+  margin-inline: auto;
+}
+
+.paragraph-one {
+  margin-block-end: 0.875rem;
+}
+
+/* footer */
+.footer {
+  background-color: var(--background-clr);
+  padding-block-end: 0.9375rem;
+  margin-block-start: auto;
+}
+
+.social-media-list {
+  display: inline-block;
+  padding-inline-start: 0;
+}
+
+.social-link {
+  font-size: 1.5625rem;
+  color: var(--social-link-clr);
+  transition: 350ms ease;
+}
+
+.social-link:is(:hover, :focus-visible) {
+  color: var(--social-link-hover-clr);
+}
+
+.copyright-information {
+  font-size: 0.9688rem;
+}
